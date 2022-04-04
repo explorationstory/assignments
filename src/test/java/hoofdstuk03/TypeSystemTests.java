@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.sql.Time;
+import java.time.LocalTime;
+
 public class TypeSystemTests {
 
     @Test
@@ -47,5 +50,18 @@ public class TypeSystemTests {
         Assertions.assertEquals(14,total);
 
         System.out.println(total);
+    }
+
+    @Test
+    void giveNumberOfHours_whenCalculateTime_thenReturnCorrectTime() {
+
+        TimeCalculator timeCalculator = new TimeCalculator();
+
+        LocalTime time = timeCalculator.calculateTimeAfter(80);
+
+        System.out.println(time);
+
+        Assertions.assertEquals(LocalTime.of(7,00),time);
+
     }
 }
