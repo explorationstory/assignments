@@ -80,7 +80,7 @@ public class TypeSystemTests {
 
     @Test
     @DisplayName("Vraag 5")
-    void rangesForAllNumericValuesTests() {
+    void givenMinOrMaxCondition_whenGetByteRangeValue_thenRangeLimitReturned() {
 
         ValueRanges valueRanges = new ValueRanges();
 
@@ -91,6 +91,27 @@ public class TypeSystemTests {
         Assertions.assertEquals(-128,minimumValue);
 
         Assertions.assertEquals(127,maximumValue);
+
+    }
+
+    @Test
+    @DisplayName("Vraag 6")
+    void clientsNameAfterAssigningReferenceTypesTest() {
+
+        //Twee adressen naar een locatie in geheugen van String objecten
+
+        hoofdstuk03.Client client1 = new hoofdstuk03.Client("Jan");
+        hoofdstuk03.Client client2 = new hoofdstuk03.Client("Piet");
+
+        // Adres client 2 wijst nu naar client 1 adres, dus client2.naam wordt Jan
+        client2 = client1;
+
+        // name client 1 wordt nu "Joris", beide variabelen wijzen naar hetzelfde adres
+
+        client2.name = "Joris";
+
+        System.out.println(client1.name);
+
 
     }
 }
