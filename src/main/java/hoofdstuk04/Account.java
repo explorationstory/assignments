@@ -8,13 +8,12 @@ public class Account {
     public boolean validateAccountNumber(String accountNr) {
         boolean isValid = false;
 
-          List<Character> accountNrArray = stripDotsFromInputString(accountNr);
+        List<Character> accountNrArray = stripDotsFromInputString(accountNr);
 
         int sum = 0;
         int controlnumber = 9;
 
-        for (char c :
-                accountNrArray) {
+        for (char c : accountNrArray) {
             sum+= controlnumber * Character.getNumericValue(c);
             System.out.println(sum);
             controlnumber--;
@@ -25,7 +24,6 @@ public class Account {
         }
 
         return isValid;
-
     }
 
     public boolean isDivisibleBy11(int number) {
