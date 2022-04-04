@@ -28,4 +28,12 @@ class H2OverViewJavaTests {
 
             Assertions.assertEquals("Hello Jamie",message);
         }
+
+        @Test
+        void givenNoParam_whenPrintHelloWithParams_ThenHelloWorldReturned() {
+
+            String message = assignmentsChapter2.printHelloWithParams(null);
+
+            Assertions.assertEquals("Hello world",message);
+        }
 }
