@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Scanner;
+
+import static java.lang.System.*;
+import static java.lang.System.in;
+
 class H2OverViewJavaTests {
 
     AssignmentsChapter2 assignmentsChapter2;
@@ -30,12 +35,19 @@ class H2OverViewJavaTests {
         }
 
 
-
         @Test
         void givenNoParam_whenPrintHelloWithParams_ThenHelloWorldReturned() {
 
             String message = assignmentsChapter2.printHelloWithParams(null);
 
             Assertions.assertEquals("Hello world",message);
+        }
+
+        @Test
+        void scanInputFromCommandlineTest() {
+            Scanner in = new Scanner(System.in);
+            out.println("Enter username");
+            String userName = in.nextLine();
+            out.println("Username is: " + userName);
         }
 }
