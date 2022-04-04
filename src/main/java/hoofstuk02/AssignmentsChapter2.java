@@ -16,6 +16,11 @@ public class AssignmentsChapter2 {
         return message;
     }
 
+    /**
+     * Returns Hello <name> with params, Hello world without params
+     * @param name
+     * @return String
+     */
     public String printHelloWithParams(String name) {
 
         Optional<String> nameOptional = Optional.ofNullable(name);
