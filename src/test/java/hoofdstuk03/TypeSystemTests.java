@@ -77,4 +77,20 @@ public class TypeSystemTests {
         Assertions.assertEquals(3, numberOfDays);
 
     }
+
+    @Test
+    @DisplayName("Vraag 5")
+    void rangesForAllNumericValuesTests() {
+
+        ValueRanges valueRanges = new ValueRanges();
+
+        int minimumValue = valueRanges.getByteRangeValue("min");
+
+        int maximumValue = valueRanges.getByteRangeValue("max");
+
+        Assertions.assertEquals(-128,minimumValue);
+
+        Assertions.assertEquals(127,maximumValue);
+
+    }
 }
