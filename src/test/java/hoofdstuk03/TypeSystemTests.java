@@ -84,7 +84,7 @@ public class TypeSystemTests {
 
         ValueRanges valueRanges = new ValueRanges();
 
-        int minimumValue = valueRanges.getByteRangeValue("min");
+        int minimumValue = valueRanges.getByteRangeValue("Min");
 
         int maximumValue = valueRanges.getByteRangeValue("max");
 
