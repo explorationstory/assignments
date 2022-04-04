@@ -1,4 +1,4 @@
-package hoofstuk02;
+package hoofdstuk02;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class AssignmentsChapter2 {
 
     /**
      * Returns Hello <name> with params, Hello world without params
-     * @param name
+     * @param name is naam input
      * @return String
      */
     public String printHelloWithParams(String name) {

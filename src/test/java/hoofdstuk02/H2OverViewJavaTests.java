@@ -1,4 +1,4 @@
-package hoofstuk02;
+package hoofdstuk02;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
 
+import static java.lang.Math.*;
 import static java.lang.System.*;
-import static java.lang.System.in;
 
 class H2OverViewJavaTests {
 
@@ -49,5 +49,10 @@ class H2OverViewJavaTests {
             out.println("Enter username");
             String userName = in.nextLine();
             out.println("Username is: " + userName);
+        }
+
+        @Test
+        void question7Test() {
+            int plusTwo = abs(-2);
         }
 }
