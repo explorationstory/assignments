@@ -11,4 +11,8 @@ public class AssignmentsChapter2 {
         log.info(message);
         return message;
     }
+
+    public String printHelloWithParams(String name) {
+        return String.format("Hello %s", name);
+    }
 }
