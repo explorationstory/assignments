@@ -53,15 +53,28 @@ public class TypeSystemTests {
     }
 
     @Test
+    @DisplayName("Vraag 4")
     void giveNumberOfHours_whenCalculateTime_thenReturnCorrectTime() {
 
         TimeCalculator timeCalculator = new TimeCalculator();
 
-        LocalTime time = timeCalculator.calculateTimeAfter(80);
+        LocalTime time = timeCalculator.calculateTimeAfter(LocalTime.of(23,00),80);
 
         System.out.println(time);
 
         Assertions.assertEquals(LocalTime.of(7,00),time);
+
+    }
+
+    @Test
+    @DisplayName("Vraag 4")
+    void givenNumberOfHours_whenDetermineDays_thenNumberOfDaysReturned() {
+
+        TimeCalculator timeCalculator = new TimeCalculator();
+
+        int numberOfDays = timeCalculator.determineDays(LocalTime.of(23, 00), 80);
+
+        Assertions.assertEquals(3, numberOfDays);
 
     }
 }
